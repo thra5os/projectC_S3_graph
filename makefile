@@ -1,15 +1,15 @@
-all : TP3graphe
+all : EXEC
 
-flow.o : flow.c flow.h
-	gcc -c flow.c flow.h
+flow_mission3.o : flow_mission3.c flow_mission3.h
+	gcc -c flow_mission3.c flow_mission3.h
 
-main.o : main.c
-	gcc -o main.o -c main.c
+main_mission3.o : main_mission3.c
+	gcc -o main_mission3.o -c main_mission3.c
 
-TP3graphe : flow.o main.o
-	gcc -o TP3graphe main.o flow.o
+EXEC : flow_mission3.o main_mission3.o
+	gcc -o TP3graphe main_mission3.o flow_mission3.o
 
 clean :
 	rm -rf *.o
-	rm -rf TP3graphe
+	rm -rf EXEC
 	rm -rf *.h.gch
