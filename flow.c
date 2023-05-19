@@ -57,6 +57,7 @@ void fillArray(int i_graph[N][N], FILE * file)
         //printf("arc d = %d\n\n", i_bowRight);
 
         i_graph[i_bowRight][i_bowLeft] = i_value;
+        i_graph[i_bowLeft][i_bowRight] = i_value;
     }
 }
 
